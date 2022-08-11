@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PERSON MANAGEMENT SYSTEM</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+</head>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box}
+        
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus, input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+        
+        /* Set a style for all buttons */
+        button {
+          background-color: #04AA6D;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+        }
+        
+        button:hover {
+          opacity:1;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+          padding: 14px 20px;
+          background-color: #f44336;
+        }
+        
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+          float: left;
+          width: 50%;
+        }
+        
+        /* Add padding to container elements */
+        .container {
+          padding: 16px;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+          .cancelbtn, .signupbtn {
+             width: 100%;
+          }
+        }
+        </style>
+        <body style="background-color:black">
+        
+        <form action="/action_page.php" style="border:1px solid #ccc">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+            
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+            <div class="clearfix">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+    <body>
+       
+          
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+
+          </div>
+        <div class="conatiner">
+            <header>
+                <div>
+                    <img style="padding: 10px;"id="logo" src="logo.png" alt="" width="100" height="100">
+                    <input id="search" type="text" placeholder="search..." />
+                    <i id="button" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </header>
+
+            <button onclick="request()">Click here to fetch the details of the users</button>
+            
+            
+
+            <div class="container">
+                <div id="videos"></div>
+            </div>
+
+        </div>
+        <section>
+            <div class="header">
+                <h2>Blog Name</h2>
+              </div>
+              
+              <div class="row">
+                <div class="leftcolumn">
+                  <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>This is to show the heading</p>
+                  </div>
+                  <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>This is to show the heading .</p>
+                  </div>
+                </div>
+                <div class="rightcolumn">
+                  <div class="card">
+                    <h2>About Me</h2>
+                    <div class="fakeimg" style="height:100px;">Image</div>
+                    <p>Person details</p>
+                  </div>
+                  <div class="card">
+                    <h3>Popular Post</h3>
+                    <div class="fakeimg">Image</div><br>
+                    <div class="fakeimg">Image</div><br>
+                    <div class="fakeimg">Image</div>
+                  </div>
+                  <div class="card">
+                    <h3>Follow Me</h3>
+                    <p>Some text..</p>
+                  </div>
+                </div>
+              </div>
+              
+            <nav>
+              <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">ID</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </nav>
+            
+            <article>
+              <h1></h1>
+              <p>The is to show the article</p>
+              <p>News Feed</p>
+            </article>
+          </section>
+        <footer>
+            <p>Author: abc<br>
+            <a href="mailto:hege@example.com">abc@example.com</a></p>
+          </footer>
+
+
+    </body>
+    <script>
+      function request(){
+        fetch("https://jsonplaceholder.typicode.com/users?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09")
+        .then (function(response){
+          return response.json()
+
+
+        })
+        .then((response) =>{
+          console.log(response)
+         
+        })
+        
+      }
+    </script>
+</html>
